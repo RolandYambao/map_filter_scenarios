@@ -11,7 +11,7 @@ print('MATH', list(result_numbers))
 prices = [9.99, 12.99, 17.99, 33.99]
 def increase_7_percent(price):
     return price * 1.07
-    
+
 result = list(map(increase_7_percent, prices))
 print("price increased 7 percent", result)
 
