@@ -38,39 +38,41 @@ print(does_username_exist('diablo666'))
 print(does_username_exist('whoGoesThere21'))
 
 # Scenario 4
-taken_user_names = ['Bob', 'Jim', 'Joe', 'Bill', 'Name']
-name_1 = ['Joe']
-name_2 = ['Mark']
-def check_username(name_1, name_2, taken_names):
-    for i in taken_names:
-        if i == name_1 and i == name_2:
-            return "Both Names Taken"
-        elif i == name_1 and i != name_2:
-            return name_1 + " is Taken"
-        elif i != name_1 and i == name_2:
-            return name_2 + " is Taken"
-        else:
-            return "Both Names are not Taken"
+# taken_user_names = ['Bob', 'Jim', 'Joe', 'Bill', 'Name']
+# name_1 = ['Joe']
+# name_2 = ['Mark']
+# def check_username(name_1, name_2, taken_names):
+#     for i in taken_names:
+#         if i == name_1 and i == name_2:
+#             return "Both Names Taken"
+#         elif i == name_1 and i != name_2:
+#             return name_1 + " is Taken"
+#         elif i != name_1 and i == name_2:
+#             return name_2 + " is Taken"
+#         else:
+#             return "Both Names are not Taken"
 
-check_names = list(filter(check_username, name_1, name_2, taken_user_names))
-print(check_names)
+# check_names = list(filter(check_username, name_1, name_2, taken_user_names))
+# print(check_names)
 
 # Scenario 5
 #splitting a more chaotic list into smaller organized lists (cameron)
-stuff = [79.99, 'Shirt', 45.23, 'Pants', True, 'Cat', 666.666, False]
+stuff = [
+    {'item': 'amazing shirt', 'owner': 'felix da housecat', 'price': 27.99},
+    {'item': 'amazing pants', 'location': 'legs', 'price': 44.99},
+    {'item': 'amazing top hat', 'price': 27001.99}
+]
 
 def sort_stuff(arr):
+    items = []
+    prices = []
     for i in range(len(arr)):
         thing = arr[i]
-        numbers = []
-        strings = []
-        booleans = []
-        if thing == int:
-            numbers.append(thing)
-        elif thing == str:
-            strings.append(thing)
-        elif thing == bool:
-            booleans.append(thing)
-    return numbers, strings, booleans
+        if thing['price']:
+            prices.append(thing['price'])
+        if thing['item']:
+            items.append(thing['item'])
+        
+    return items, prices
 print("sorted things?", sort_stuff(stuff))
 
