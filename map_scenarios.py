@@ -36,6 +36,15 @@ def cart_total(prices):
     return total
 print("cart total", cart_total(cart))
 
+#add taxes to items (new scenario)
+cart = [17.99, 121.99, 17.99, 38.99]
+def add_taxes(cost):
+    return cost * 1.08
+
+total_with_tax = list(map(add_taxes, cart))
+print('added 8 pct sales tax', total_with_tax)
+
+
 # Scenario 5
 # List of Books (Kabin)
 book_titles = ['A Book', 'Another Book', 'Interesting Book', 'Do Not Read This']
