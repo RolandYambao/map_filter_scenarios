@@ -26,15 +26,7 @@ print('AGAIN COMMENTS', again_comments)
 # Scenario 3
 # verify if a username is taken(masa)
 usernames = ['diablo666', 'ghostRiderNicCage', 'weewooACAB']
-taken_user_names = ['Bob', 'Jim', 'Joe', 'Bill', 'Name']
-def check_username(taken_names):
-    name_1 = 'Joe'
-    for i in taken_names.split():
-        if i == name_1:
-            return i
 
-check_names = list(filter(check_username, taken_user_names))
-print('Users with the name "Joe"', check_names)
 def does_username_exist(username):
     for i in range(len(usernames)):
         if username == usernames[i]:
@@ -45,6 +37,7 @@ def does_username_exist(username):
             return False
 print(does_username_exist('diablo666'))
 print(does_username_exist('whoGoesThere21'))
+
 
 # Scenario 4
 # Verify if Username is Taken (Masa)
@@ -78,4 +71,3 @@ def sort_stuff(arr):
         
     return items, prices
 print("sorted things?", sort_stuff(stuff))
-
