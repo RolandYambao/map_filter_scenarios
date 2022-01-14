@@ -13,20 +13,13 @@ print('AGAIN COMMENTS', again_comments)
 
 # Scenario 4
 taken_user_names = ['Bob', 'Jim', 'Joe', 'Bill', 'Name']
-name_1 = ['Joe']
-name_2 = ['Mark']
-def check_username(name_1, name_2, taken_names):
-    for i in taken_names:
-        if i == name_1 and i == name_2:
-            return "Both Names Taken"
-        elif i == name_1 and i != name_2:
-            return name_1 + " is Taken"
-        elif i != name_1 and i == name_2:
-            return name_2 + " is Taken"
-        else:
-            return "Both Names are not Taken"
+def check_username(taken_names):
+    name_1 = 'Joe'
+    for i in taken_names.split():
+        if i == name_1:
+            return i
 
-check_names = list(filter(check_username, name_1, name_2, taken_user_names))
-print(check_names)
+check_names = list(filter(check_username, taken_user_names))
+print('Users with the name "Joe"', check_names)
 
 # Scenario 5
