@@ -26,8 +26,6 @@ print('AGAIN COMMENTS', again_comments)
 # Scenario 3
 # verify if a username is taken(masa)
 usernames = ['diablo666', 'ghostRiderNicCage', 'weewooACAB']
-
-# Scenario 4
 taken_user_names = ['Bob', 'Jim', 'Joe', 'Bill', 'Name']
 def check_username(taken_names):
     name_1 = 'Joe'
