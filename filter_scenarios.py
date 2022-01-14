@@ -39,6 +39,7 @@ print(does_username_exist('diablo666'))
 print(does_username_exist('whoGoesThere21'))
 
 
+
 # Scenario 4
 # Verify if Username is Taken (Masa)
 taken_user_names = ['Bob', 'Jim', 'Joe', 'Bill', 'Name']
@@ -53,21 +54,20 @@ print('Users with the name "Joe"', check_names)
 
 # Scenario 5
 # splitting a more chaotic list into smaller organized lists (cameron)
-stuff = [
-    {'item': 'amazing shirt', 'owner': 'felix da housecat', 'price': 27.99},
-    {'item': 'amazing pants', 'location': 'legs', 'price': 44.99},
-    {'item': 'amazing top hat', 'price': 27001.99}
-]
+stuff = ['amazing shirt', 'felix da housecat', 27, 'amazing pants', 'legs', 4499, 'amazing top hat', 27001]
 
-def sort_stuff(arr):
-    items = []
-    prices = []
-    for i in range(len(arr)):
-        thing = arr[i]
-        if thing['price']:
-            prices.append(thing['price'])
-        if thing['item']:
-            items.append(thing['item'])
-        
-    return items, prices
-print("sorted things?", sort_stuff(stuff))
+def sort_prices(thing):
+    if isinstance(thing, str):
+        return True
+    else:
+        return False
+prices = list(filter(sort_prices, stuff))
+print("filtered prices?", prices)
+
+def sort_items(thing):
+    if isinstance(thing, int):
+        return True
+    else:
+        return False
+items = list(filter(sort_items, stuff))
+print("filtered items?", items)
